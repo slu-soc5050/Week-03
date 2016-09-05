@@ -6,6 +6,7 @@ This repository contains files for:
     - stata-snippets.cson
   - Commands
     - autoMissing.dta
+    - week-03-stataQuickRef.pdf
   - Markdoc
     - week-03-markdoc.do
     - week-03-markdoc.md
