@@ -135,7 +135,7 @@
 
             // copy source data to new directory
 
-            global $newData "${9:/*enter a new filename here*/}.dta"
+            global newData "${9:/*enter a new filename here*/}.dta"
             copy $sourceData "$projName/$newData", replace
 
             // ==========================================================================
@@ -227,6 +227,11 @@
           */
 
           // ==========================================================================
+
+          // open data
+          use "$projName/$newData"
+
+          // ==========================================================================
           // ==========================================================================
           // ==========================================================================
 
@@ -242,7 +247,7 @@
           save "$projName/$newData", replace
 
           // ==========================================================================
-          
+
           // exit
 
           """
@@ -306,7 +311,8 @@
           // ==========================================================================
 
           // start MarkDoc log
-          quietly log using "$projName-markdoc.smcl", replace smcl name(markdoc)
+          quietly log using "$projName/$projName-markdoc.smcl", ///
+            replace smcl name(markdoc)
 
           // OFF
           // ==========================================================================
@@ -331,7 +337,8 @@
           quietly log close markdoc
 
           // convert MarkDoc log to Markdown
-          markdoc "$projName-markdoc", replace export(md) install
+          markdoc "$projName/$projName-markdoc", ///
+            replace export(md) install
 
           // ==========================================================================
           // ==========================================================================
