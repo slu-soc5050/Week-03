@@ -145,7 +145,7 @@ After cleaning missing data, I created a number of new variables
           .  graph export "$projName/Plots/fig1.png", as(png) width(800) height(600) replace
           (file Week-03-stataExample/Plots/fig1.png written in PNG format)
 
-![fig1]()
+![fig1](https://github.com/slu-soc5050/Week-03/blob/master/Commands/Week-03-stataExample/%20Plots/fig1.png)
 
           .  quietly log close markdoc
           

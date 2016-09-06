@@ -113,7 +113,7 @@ graph bar (count), over(mpgOrd) scheme(s2mono) ///
 graph export "$projName/Plots/fig1.png", as(png) width(800) height(600) replace
 
 /***
-![fig1]()
+![fig1](https://github.com/slu-soc5050/Week-03/blob/master/Commands/Week-03-stataExample/Plots/fig1.png)
 ***/
 
 // OFF

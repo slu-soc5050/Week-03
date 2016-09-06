@@ -2,7 +2,7 @@
       name:  <unnamed>
        log:  /Users/herb/Desktop/Week-03-stataExample/Week-03-stataExample.txt
   log type:  text
- opened on:   5 Sep 2016, 20:49:45
+ opened on:   5 Sep 2016, 21:49:45
 
 . 
 . // ==========================================================================
@@ -54,6 +54,7 @@
 . global newData "autoMissingClean.dta"
 
 . copy $sourceData "$projName/$newData", replace
+(note: file Week-03-stataExample/autoMissingClean.dta not found)
 
 . 
 . // ==========================================================================
@@ -589,7 +590,8 @@ end of do-file
 
 . 
 . /***
-> ![fig1]()
+> ![fig1](https://github.com/slu-soc5050/Week-03/blob/master/Commands/Week-03-st
+> ataExample/Plots/fig1.png)
 > ***/
 . 
 . // OFF
@@ -623,10 +625,13 @@ end of do-file
 . // copy code to code archive
 . 
 . copy "master.do" "$projName/CodeArchive/master.do", replace
+(note: file Week-03-stataExample/CodeArchive/master.do not found)
 
 . copy "data.do" "$projName/CodeArchive/data.do", replace
+(note: file Week-03-stataExample/CodeArchive/data.do not found)
 
 . copy "analysis.do" "$projName/CodeArchive/analysis.do", replace
+(note: file Week-03-stataExample/CodeArchive/analysis.do not found)
 
 . 
 . // ==========================================================================
@@ -637,5 +642,5 @@ end of do-file
       name:  <unnamed>
        log:  /Users/herb/Desktop/Week-03-stataExample/Week-03-stataExample.txt
   log type:  text
- closed on:   5 Sep 2016, 20:49:49
+ closed on:   5 Sep 2016, 21:49:50
 --------------------------------------------------------------------------------
