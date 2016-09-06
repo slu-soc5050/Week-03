@@ -154,4 +154,4 @@ After cleaning missing data, I created a number of new variables
 ![fig1](https://raw.githubusercontent.com/slu-soc5050/Week-03/master/Commands/Week-03-stataExample/Plots/fig1.png)
 
 ### Additional Notes
-After I created this file in Stata, I opened it in Atom and edited it. There were a couple typos, and I fixed the block code exports so that they conform to Markdown standards (using the triple backticks to wrap the code blocks). Finally, I deleted the MarkDoc command that was attached to the end of the file in error.
+After I created this file in Stata, I opened it in Atom and edited it. The title of the document was missing, which is something that I will look into for next week. There were a couple typos, and I fixed the block code exports so that they conform to Markdown standards (using the triple backticks to wrap the code blocks). Finally, I deleted the MarkDoc command that was attached to the end of the file in error.
