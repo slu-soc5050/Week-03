@@ -154,9 +154,9 @@
 
             // copy code to code archive
 
-            copy "master.do" "$projName/Code/master.do", replace
-            copy "data.do" "$projName/Code/data.do", replace
-            copy "analysis.do" "$projName/Code/analysis.do", replace
+            copy "master.do" "$projName/CodeArchive/master.do", replace
+            copy "data.do" "$projName/CodeArchive/data.do", replace
+            copy "analysis.do" "$projName/CodeArchive/analysis.do", replace
 
             // ==========================================================================
 
