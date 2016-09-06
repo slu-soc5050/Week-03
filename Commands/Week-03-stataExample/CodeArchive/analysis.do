@@ -109,11 +109,11 @@ graph bar (count), over(mpgOrd) scheme(s2mono) ///
   title("Fig 1. - Fuel Efficiency in Miles per Gallon") ///
   subtitle("1978 Vehicles") ///
   note("Produced by Christopher Prener, PhD; Modified Stata data")
-  
+
 graph export "$projName/Plots/fig1.png", as(png) width(800) height(600) replace
 
 /***
-![fig1](https://github.com/slu-soc5050/Week-03/blob/master/Commands/Week-03-stataExample/Plots/fig1.png)
+![fig1](https://raw.githubusercontent.com/slu-soc5050/Week-03/master/Commands/Week-03-stataExample/Plots/fig1.png
 ***/
 
 // OFF
