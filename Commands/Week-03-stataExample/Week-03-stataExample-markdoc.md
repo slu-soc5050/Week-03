@@ -26,35 +26,35 @@ visualized using the `tabulate` command.
     the observations. This is a large proportion of the observations and
     presents a threat to generalizability.
 
-```stata
-.  tabulate mpg, missing
-
-     Mileage |
-       (mpg) |      Freq.     Percent        Cum.
--------------+-----------------------------------
-          12 |          2        2.70        2.70
-          14 |          6        8.11       10.81
-          15 |          2        2.70       13.51
-          17 |          4        5.41       18.92
-          18 |          9       12.16       31.08
-          19 |          8       10.81       41.89
-          20 |          3        4.05       45.95
-          21 |          5        6.76       52.70
-          22 |          5        6.76       59.46
-          23 |          3        4.05       63.51
-          24 |          4        5.41       68.92
-          25 |          5        6.76       75.68
-          26 |          3        4.05       79.73
-          28 |          3        4.05       83.78
-          29 |          1        1.35       85.14
-          31 |          1        1.35       86.49
-          34 |          1        1.35       87.84
-          35 |          2        2.70       90.54
-          41 |          1        1.35       91.89
-           . |          6        8.11      100.00
--------------+-----------------------------------
-       Total |         74      100.00
-```
+        ```stata
+        .  tabulate mpg, missing
+        
+             Mileage |
+               (mpg) |      Freq.     Percent        Cum.
+        -------------+-----------------------------------
+                  12 |          2        2.70        2.70
+                  14 |          6        8.11       10.81
+                  15 |          2        2.70       13.51
+                  17 |          4        5.41       18.92
+                  18 |          9       12.16       31.08
+                  19 |          8       10.81       41.89
+                  20 |          3        4.05       45.95
+                  21 |          5        6.76       52.70
+                  22 |          5        6.76       59.46
+                  23 |          3        4.05       63.51
+                  24 |          4        5.41       68.92
+                  25 |          5        6.76       75.68
+                  26 |          3        4.05       79.73
+                  28 |          3        4.05       83.78
+                  29 |          1        1.35       85.14
+                  31 |          1        1.35       86.49
+                  34 |          1        1.35       87.84
+                  35 |          2        2.70       90.54
+                  41 |          1        1.35       91.89
+                   . |          6        8.11      100.00
+        -------------+-----------------------------------
+               Total |         74      100.00
+        ```
 
 2.  It can get tedious to export a large number of frequency tables. It
     is much simpler to use the `misstable` command to summarize the
@@ -65,19 +65,19 @@ visualized using the `tabulate` command.
     (`mpg`, `rep78`, and `trunk`) all have greater than 5.00% of
     missing data.
 
-```stata
-.  misstable summarize mpg rep78 trunk turn
-                                                               Obs<.
-                                                +------------------------------
-               |                                | Unique
-      Variable |     Obs=.     Obs>.     Obs<.  | values        Min         Max
-  -------------+--------------------------------+------------------------------
-           mpg |         6                  68  |     19         12          41
-         rep78 |         5                  69  |      5          1           5
-         trunk |         4                  70  |     17          5          23
-          turn |         3                  71  |     17         31          51
-  -----------------------------------------------------------------------------
-```
+    ```stata
+    .  misstable summarize mpg rep78 trunk turn
+                                                                   Obs<.
+                                                    +------------------------------
+                   |                                | Unique
+          Variable |     Obs=.     Obs>.     Obs<.  | values        Min         Max
+      -------------+--------------------------------+------------------------------
+               mpg |         6                  68  |     19         12          41
+             rep78 |         5                  69  |      5          1           5
+             trunk |         4                  70  |     17          5          23
+              turn |         3                  71  |     17         31          51
+      -----------------------------------------------------------------------------
+    ```
 
 3.  An additional concern with missing data is whether or not they are
     missing completely at random (MCAR). The table below suggests (but
@@ -85,31 +85,31 @@ visualized using the `tabulate` command.
     missingness - there appears to be no pattern where data in one
     variable predicts missingness in another.
 
-```stata
-.  misstable tree mpg rep78 trunk turn, frequency
-
-  Nested pattern of missing values
-         mpg      rep78      trunk       turn
-  -------------------------------------------
-           6          0          0          0
-                                            0
-                                 0          0
-                                            0
-                      6          0          0
-                                            0
-                                 6          0
-                                            6
-          68          5          0          0
-                                            0
-                                 5          2
-                                            3
-                     63          4          0
-                                            4
-                                59          1
-                                           58
-  -------------------------------------------
- (number missing listed first)
-```
+    ```stata
+    .  misstable tree mpg rep78 trunk turn, frequency
+    
+      Nested pattern of missing values
+             mpg      rep78      trunk       turn
+      -------------------------------------------
+               6          0          0          0
+                                                0
+                                     0          0
+                                                0
+                          6          0          0
+                                                0
+                                     6          0
+                                                6
+              68          5          0          0
+                                                0
+                                     5          2
+                                                3
+                         63          4          0
+                                                4
+                                    59          1
+                                               58
+      -------------------------------------------
+     (number missing listed first)
+    ```
 
 4.  The above table suggests a different issue, however. The bottom
     number, 58, refers to the total number of observations that are not
