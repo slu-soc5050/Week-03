@@ -110,7 +110,7 @@ graph bar (count), over(mpgOrd) scheme(s2mono) ///
   subtitle("1978 Vehicles") ///
   note("Produced by Christopher Prener, PhD; Modified Stata data")
   
-graph save "$projName/Plots/fig1.png", replace
+graph export "$projName/Plots/fig1.png", width(800) height(600) replace
 
 /***
 ![fig1]()
