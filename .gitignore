@@ -1,3 +1,8 @@
+# This is a .gitignore file that specifies for GitHub files that should
+# never be uploaded to your repositories.
+# More details - https://help.github.com/articles/ignoring-files/
+# Source - https://gist.github.com/octocat/9257657
+
 # Compiled source #
 ###################
 *.com
