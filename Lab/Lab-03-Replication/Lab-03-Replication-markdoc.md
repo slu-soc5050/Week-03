@@ -147,7 +147,7 @@ appropriate plot. This illustrates the modal category of 1 clearly.
   (file Lab-03-Replication/Plots/fig1.png written in PNG format)
 ```
 
-![fig1]()
+![fig1](https://raw.githubusercontent.com/slu-soc5050/Week-03/master/Lab/Lab-03-Replication/Plots/fig1.png)
 
 11c-2. Plot for `bigHouse`
 
@@ -166,7 +166,9 @@ of 0 clearly.
   (file Lab-03-Replication/Plots/fig2.png written in PNG format)
 ```
 
-![fig2]()
+![fig2](https://raw.githubusercontent.com/slu-soc5050/Week-03/master/Lab/Lab-03-Replication/Plots/fig2.png)
 
 ### Post-Export from Stata Work
 After exporting from Stata, I opened this file in Atom. I fixed the header, which did not have a title passed to it from Stata. I added in backticks for variable names (which I did not include in the do-files, they were generating error r(132) and I decided that it was faster to use Find and Replace in Atom to add them). I also added in the triple backtick symbols for codeblocks. Finally, I fixed a couple of small typos and removed errant spaces introduced by MarkDoc. 
+
+After I uploaded the file to GitHub.com, I opened up the Markdown file and editited it in the browser (look for the pencil icon). In a separate browser tab, I opened each image file, right clicked on it, and opened the image itself in a new tab. This gives you access to the https://raw.githubusercontent.com url that you need for linking to images. See the Week 03 jotter for more details on this.
