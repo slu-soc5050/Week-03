@@ -70,7 +70,7 @@ The inter-quartile range of $x_1$ is 5.
 summary(anscombe$x1)
 ```
 
-This table of summary statistis for $x_1$ includes the min and max values that correspond to the lower and upper bounds of the distribution noted in question 9. It also contains the median (question 6) and the mean (question 7). Finally, it contains the 1st and third quartiles, which make up the upper and lower bounds of the inter-quartile range (question 10).
+This table of summary statistics for $x_1$ includes the min and max values that correspond to the lower and upper bounds of the distribution noted in question 9. It also contains the median (question 6) and the mean (question 7). Finally, it contains the 1st and third quartiles, which make up the upper and lower bounds of the inter-quartile range (question 10).
 
 ### The `y_1` Vector
 #### 6. Median
@@ -117,7 +117,7 @@ The inter-quartile range of $y_1$ is 2.255.
 summary(anscombe$y1)
 ```
 
-This table of summary statistis for $y_1$ includes the min and max values that correspond to the lower and upper bounds of the distribution noted in question 9. It also contains the median (question 6) and the mean (question 7). Finally, it contains the 1st and third quartiles, which make up the upper and lower bounds of the inter-quartile range (question 10).
+This table of summary statistics for $y_1$ includes the min and max values that correspond to the lower and upper bounds of the distribution noted in question 9. It also contains the median (question 6) and the mean (question 7). Finally, it contains the 1st and third quartiles, which make up the upper and lower bounds of the inter-quartile range (question 10).
 
 ### `mtcars` Questions
 #### 12. Frequency Table for `gear`
@@ -140,51 +140,51 @@ The modal category represents 46.875% of the observations in `gear`.
 mean(mtcars$mpg)
 ```
 
-The average fuel efficency of the cars in `mtcars` is 20.091 miles per gallon.
+The average fuel efficiency of the cars in `mtcars` is 20.091 miles per gallon.
 
 ## Extra - Plotting Anscombe's Quartet
 ### Data Set 1
 ```{r}
-ggplot(data = anscombe) + 
-  geom_point(mapping = aes(x1, y1)) + 
-  geom_abline(intercept = 3, slope = 0.5) + 
-  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+ggplot(data = anscombe) +
+  geom_point(mapping = aes(x1, y1)) +
+  geom_abline(intercept = 3, slope = 0.5) +
+  scale_x_continuous(breaks = seq(0, 20, 2)) +
   scale_y_continuous(breaks = seq(0, 12, 2)) +
-  expand_limits(x = 0, y = 0) + 
+  expand_limits(x = 0, y = 0) +
   labs(title = "data set 1")
 ```
 
 ### Data Set 2
 ```{r}
-ggplot(data = anscombe) + 
-  geom_point(mapping = aes(x2, y2)) + 
-  geom_abline(intercept = 3, slope = 0.5) + 
-  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+ggplot(data = anscombe) +
+  geom_point(mapping = aes(x2, y2)) +
+  geom_abline(intercept = 3, slope = 0.5) +
+  scale_x_continuous(breaks = seq(0, 20, 2)) +
   scale_y_continuous(breaks = seq(0, 12, 2)) +
-  expand_limits(x = 0, y = 0) + 
+  expand_limits(x = 0, y = 0) +
   labs(title = "data set 2")
 ```
 
 
 ### Data Set 3
 ```{r}
-ggplot(data = anscombe) + 
-  geom_point(mapping = aes(x3, y3)) + 
-  geom_abline(intercept = 3, slope = 0.5) + 
-  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+ggplot(data = anscombe) +
+  geom_point(mapping = aes(x3, y3)) +
+  geom_abline(intercept = 3, slope = 0.5) +
+  scale_x_continuous(breaks = seq(0, 20, 2)) +
   scale_y_continuous(breaks = seq(0, 12, 2)) +
-  expand_limits(x = 0, y = 0) + 
+  expand_limits(x = 0, y = 0) +
   labs(title = "data set 3")
 ```
 
 
 ### Data Set 4
 ```{r}
-ggplot(data = anscombe) + 
-  geom_point(mapping = aes(x4, y4)) + 
-  geom_abline(intercept = 3, slope = 0.5) + 
-  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+ggplot(data = anscombe) +
+  geom_point(mapping = aes(x4, y4)) +
+  geom_abline(intercept = 3, slope = 0.5) +
+  scale_x_continuous(breaks = seq(0, 20, 2)) +
   scale_y_continuous(breaks = seq(0, 12, 2)) +
-  expand_limits(x = 0, y = 0) + 
+  expand_limits(x = 0, y = 0) +
   labs(title = "data set 4")
 ```
