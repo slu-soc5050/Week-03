@@ -1,0 +1,190 @@
+---
+title: "Week-03 Lab Replication"
+output: html_notebook
+---
+
+## Introduction
+This is the replication file for Lab-03.
+
+## Dependencies
+This notebook relies on the `datasets` package for data as well as the `stats` and `base` packages. These are automatically loaded by RStudio and no `library()` function calls are needed here.
+
+The extra material at the end requires the `ggplot2` package:
+
+```{r}
+library(ggplot2)
+```
+
+## Load Data
+There are two data sets needed for this lab - `anscombe` and `mtcars` - that are both included in the `datasets` package. The code below loads both of these datasets into data frames in the global environment so that you can visually inspect them, but it preserves the data frame names for easy reference.
+
+```{r}
+anscombe <- anscombe
+mtcars <- mtcars
+```
+
+## Part 1: Descriptive Statistics by Hand
+Please see the separate, scanned document in the `Week-03` repository.
+
+## Part 2: Descriptive Statistics in R
+This replication file reproduces calculations for the first of Anscombe's data sets ($x_1$ and $y_1$). If you had one of the other data sets, some of the descriptive statistics should be the same (the mean, the standard deviation), while others will be different (the median, the range, the IQR).
+
+### The `x_1` Vector
+#### 6. Median
+```{r}
+median(anscombe$x1)
+```
+
+The median of $x_1$ is 9.
+
+#### 7. Mean
+```{r}
+mean(anscombe$x1)
+```
+
+The mean of $x_1$ is 9.
+
+#### 8. Standard Deviation
+```{r}
+sd(anscombe$x1)
+```
+
+The standard deviation of $x_1$ is 3.317. **You should round all of your decimal points to the thousandths place for this course.**
+
+#### 9. Range
+```{r}
+range(anscombe$x1)
+```
+
+The range of $x_1$ is 10, with a lower bound of 4 and an upper bound of 10.
+
+#### 10. Inter-quartile Range
+```{r}
+IQR(anscombe$x1)
+```
+
+The inter-quartile range of $x_1$ is 5.
+
+#### 11. Summary Table
+```{r}
+summary(anscombe$x1)
+```
+
+This table of summary statistis for $x_1$ includes the min and max values that correspond to the lower and upper bounds of the distribution noted in question 9. It also contains the median (question 6) and the mean (question 7). Finally, it contains the 1st and third quartiles, which make up the upper and lower bounds of the inter-quartile range (question 10).
+
+### The `y_1` Vector
+#### 6. Median
+```{r}
+median(anscombe$y1)
+```
+
+The median of $y_1$ is 7.58.
+
+#### 7. Mean
+```{r}
+mean(anscombe$y1)
+```
+
+The mean of $y_1$ is 7.501.
+
+#### 8. Standard Deviation
+```{r}
+sd(anscombe$y1)
+```
+
+The standard deviation of $y_1$ is 2.032.
+
+#### 9. Range
+```{r}
+range(anscombe$y1)
+```
+
+```{r}
+10.84-4.26
+```
+
+The range of $y_1$ is 6.58, with a lower bound of 4.26 and an upper bound of 10.84.
+
+#### 10. Inter-quartile Range
+```{r}
+IQR(anscombe$y1)
+```
+
+The inter-quartile range of $y_1$ is 2.255.
+
+#### 11. Summary Table
+```{r}
+summary(anscombe$y1)
+```
+
+This table of summary statistis for $y_1$ includes the min and max values that correspond to the lower and upper bounds of the distribution noted in question 9. It also contains the median (question 6) and the mean (question 7). Finally, it contains the 1st and third quartiles, which make up the upper and lower bounds of the inter-quartile range (question 10).
+
+### `mtcars` Questions
+#### 12. Frequency Table for `gear`
+
+```{r}
+table(mtcars$gear)
+```
+
+We can see that the modal category is 3 gears.
+
+#### 13. Proportion Table for `gear`
+```{r}
+prop.table(table(mtcars$gear))
+```
+
+The modal category represents 46.875% of the observations in `gear`.
+
+#### 14. Mean of `mpg`
+```{r}
+mean(mtcars$mpg)
+```
+
+The average fuel efficency of the cars in `mtcars` is 20.091 miles per gallon.
+
+## Extra - Plotting Anscombe's Quartet
+### Data Set 1
+```{r}
+ggplot(data = anscombe) + 
+  geom_point(mapping = aes(x1, y1)) + 
+  geom_abline(intercept = 3, slope = 0.5) + 
+  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+  scale_y_continuous(breaks = seq(0, 12, 2)) +
+  expand_limits(x = 0, y = 0) + 
+  labs(title = "data set 1")
+```
+
+### Data Set 2
+```{r}
+ggplot(data = anscombe) + 
+  geom_point(mapping = aes(x2, y2)) + 
+  geom_abline(intercept = 3, slope = 0.5) + 
+  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+  scale_y_continuous(breaks = seq(0, 12, 2)) +
+  expand_limits(x = 0, y = 0) + 
+  labs(title = "data set 2")
+```
+
+
+### Data Set 3
+```{r}
+ggplot(data = anscombe) + 
+  geom_point(mapping = aes(x3, y3)) + 
+  geom_abline(intercept = 3, slope = 0.5) + 
+  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+  scale_y_continuous(breaks = seq(0, 12, 2)) +
+  expand_limits(x = 0, y = 0) + 
+  labs(title = "data set 3")
+```
+
+
+### Data Set 4
+```{r}
+ggplot(data = anscombe) + 
+  geom_point(mapping = aes(x4, y4)) + 
+  geom_abline(intercept = 3, slope = 0.5) + 
+  scale_x_continuous(breaks = seq(0, 20, 2)) + 
+  scale_y_continuous(breaks = seq(0, 12, 2)) +
+  expand_limits(x = 0, y = 0) + 
+  labs(title = "data set 4")
+```
